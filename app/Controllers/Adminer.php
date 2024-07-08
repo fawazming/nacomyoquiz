@@ -26,14 +26,14 @@ class Adminer extends BaseController
 		echo view('adminer/login');
 	}
 
-	public function dashboard()
+	public function dashboard($quizid = 0)
 	{
 		$var = new \App\Models\Variables();
 		$Quiz = new \App\Models\Quiz();
 		$scoresheet = new \App\Models\Scoresheet();
 		$user = new \App\Models\Users();
 		$session = session();
-		$qlast = $Quiz->orderBy('id', 'desc')->first()['id'];
+		$qlast = $quizid ? $quizid : $Quiz->orderBy('id', 'desc')->first()['id'];
 		if ($session->logged_in == TRUE) {
 			$data = [
 				'quizinput' => $var->where('key', 'quizinput')->find()[0]['value'],
