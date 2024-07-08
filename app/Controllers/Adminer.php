@@ -112,7 +112,7 @@ class Adminer extends BaseController
 				];
 				$session = session();
 				$session->set($ses_data);
-				return redirect()->to('db');
+				return redirect()->to('adminer/db');
 			}
 		} else {
 			echo 'Login not Successful';
