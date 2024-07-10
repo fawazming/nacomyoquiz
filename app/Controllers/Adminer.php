@@ -168,7 +168,7 @@ class Adminer extends BaseController
 				];
 				$var->update(2, $data);
 			}
-			return redirect()->to('db');
+			return redirect()->to('adminer/db');
 		} else {
 			echo 'Login not Successful';
 		}
