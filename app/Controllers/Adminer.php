@@ -467,7 +467,7 @@ class Adminer extends BaseController
 	public function test($code, $do)
 	{
 		if ($do) {
-			$key = ' !u^e_%a#t@';
+			$key = 'zqu1eysapto';
 			$pos = str_split($code);
 			$res = '';
 			foreach ($pos as $ky => $ps) {
@@ -475,7 +475,7 @@ class Adminer extends BaseController
 			}
 			return urlencode($res);
 		} else {
-			$key = ' !u^e_%a#t@';
+			$key = 'zqu1eysapto';
 			$pos = urldecode($code);
 			$res = '';
 			$pos = str_split($pos);

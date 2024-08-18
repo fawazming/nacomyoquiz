@@ -6,6 +6,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Quiz::index');
+$routes->get('/solution/(:segment)', 'Quiz::solution/$1');
 $routes->get('/gallery', 'Home::gallery');
 $routes->get('/blog', 'Home::blog');
 $routes->get('/blog/(:any)', 'Home::blogD/$1');
@@ -17,9 +18,10 @@ $routes->get('/quiz', 'Quiz::processcode');
 $routes->get('/login', 'Quiz::login');
 $routes->get('/logout', 'Quiz::logout');
 $routes->get('/questions', 'Quiz::questions');
-$routes->get('/solution/(:segment)', 'Quiz::solution/$1');
+$routes->get('/solution/(:any)', 'Quiz::solution/$1');
+$routes->get('/gensol/(:any)', 'Quiz::genSolution/$1');
 $routes->get('/test/(:segment)/(:num)', 'Quiz::test/$1/$2');
-// $routes->get('/test/(:segment)', 'Quiz::test/$1');
+$routes->get('/test/(:segment)', 'Quiz::test/$1');
 $routes->post('/quizlet', 'Quiz::postquiz');
 $routes->post('/login', 'Quiz::postlogin');
 $routes->post('/rlogin/(:segment)', 'Quiz::postrlogin/$1');

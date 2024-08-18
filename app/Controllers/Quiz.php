@@ -141,7 +141,7 @@ class Quiz extends BaseController
 	public function test($code, $do)
 	{
 		if ($do) {
-			$key = ' !u^e_%a#t@';
+			$key = 'zqu1eysapto';
 			$pos = str_split($code);
 			$res = '';
 			foreach ($pos as $ky => $ps) {
@@ -149,7 +149,7 @@ class Quiz extends BaseController
 			}
 			return urlencode($res);
 		} else {
-			$key = ' !u^e_%a#t@';
+			$key = 'zqu1eysapto';
 			$pos = urldecode($code);
 			$res = '';
 			$pos = str_split($pos);
@@ -162,6 +162,12 @@ class Quiz extends BaseController
 			}
 			return $res;
 		}
+	}
+
+	public function genSolution($code)
+	{
+		$coo = $this->test($code,1);
+		echo "<a href='".base_url('/solution/'.$coo)."'>".base_url('/solution/'.$coo)."</a>";
 	}
 
 	public function solution($id)
@@ -189,6 +195,7 @@ class Quiz extends BaseController
             if(!empty($db[0]['answers'])){
                 $uAns = json_decode($db[0]['answers']);
                 echo ('<center>You Scored <h2>'.$db[0]['score'].'</h2></center><br>');
+                echo ("<center><a href='".base_url('logout')."'>Logout</a></center><br>");
             }else{
                 echo ("<center>User's Answers not recorded</center><br>");
             }

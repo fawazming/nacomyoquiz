@@ -20,7 +20,7 @@
                         <div class="page-section">
                             <form action="<?=base_url('rlogin/'.$id)?>" method="post" class="text-center">
                                 <label for="Email">Email</label>
-                                <input type="email" placeholder="Enter your email" name="email" class="text-center form-control">
+                                <input type="text" placeholder="Enter your email" name="username" class="text-center form-control">
                                 <!-- <br> -->
                                 <label for="Phone" class="mt-3">Phone Number</label>
                                 <input type="text" placeholder="Enter your phone number" name="password" class="text-center form-control">
