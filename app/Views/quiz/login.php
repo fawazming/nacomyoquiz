@@ -22,11 +22,11 @@
                             <li class="list-group-item my-16pt mb-lg-48pt">
                                 <div class="page-section">
                                     <form action="login" method="post" class="text-center">
-                                        <label for="Email">School Name</label>
-                                        <input type="text" placeholder="Enter your School Name" name="username" class="text-center form-control">
+                                        <label for="Email">Name</label>
+                                        <input type="text" placeholder="Enter your Full Name" name="username" class="text-center form-control" required>
                                         <!-- <br> -->
-                                        <label for="Phone" class="mt-3">Official Phone Number</label>
-                                        <input type="text" placeholder="Enter your phone number" name="password" class="text-center form-control">
+                                        <label for="Phone" class="mt-3">Phone Number</label>
+                                        <input type="text" placeholder="Enter your phone number" name="password" class="text-center form-control" required>
                                         <!-- <br> -->
                                         <input type="submit" class="mt-3 btn btn-primary" value="Start Quiz">
                                     </form>
